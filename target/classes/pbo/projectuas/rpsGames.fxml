@@ -6,10 +6,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="MainStage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pbo.projectuas.GamesController">
+<AnchorPane fx:id="MainStage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;"
+   xmlns="http://javafx.com/javafx/19"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="pbo.projectuas.GamesController">
    <children>
       <Button fx:id="playButton" layoutX="260.0" layoutY="239.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="25.0" prefWidth="100.0" text="Play" />
-      <ImageView fx:id="mainImage" fitHeight="150.0" fitWidth="150.0" layoutX="235.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="62.0">
+      <ImageView fx:id="mainImage" fitHeight="150.0" fitWidth="150.0" layoutX="235.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="62.0" fx:controller="pbo.projectuas.ShuffleImage">
          <image>
             <Image url="@../../paper.png" />
             <!-- <Image url="@../../ /> -->

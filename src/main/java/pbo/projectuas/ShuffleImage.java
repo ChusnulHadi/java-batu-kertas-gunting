@@ -1,8 +1,8 @@
-package pbo.package;
+// package pbo.package;
 
-import javafx.scene.ImageView;
-import javafx.scene.Image;
+// import javafx.scene.ImageView;
+// import javafx.scene.Image;
 
-public class ShuffleImage {
-    ImageView mainImage = new ImageView();
-}
+// public class ShuffleImage {
+// ImageView mainImage = new ImageView();
+// }

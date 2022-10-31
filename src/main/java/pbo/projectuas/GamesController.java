@@ -6,15 +6,15 @@ import java.io.IOException;
 // import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-// import javafx.scene.image.Image;
-// import javafx.scene.control.Button;
-// import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class GamesController {
     // private String[] element = { "paper", "rock", "scissors" };
 
     @FXML
-    public Button playButton;
+    Button playButton;
+    ImageView mainImage;
 
     // private String getRandomChoice(String[] choices) {
     // Random rand = new Random();
@@ -22,11 +22,9 @@ public class GamesController {
     // return choices[choice];
     // }
 
-    @FXML
-    private void buttonHandler() throws IOException {
-        playButton.setText("Kotnol");
+    public void buttonHandler() throws IOException {
         // String choice = this.getRandomChoice(element);
-        // ImageView mainImage = new ImageView(new
-        // Image(getClass().getResourceAsStream("@../../" + choice + ".png")));
+        Image image = new Image("paper.png");
+        mainImage.setImage(image);
     }
 }

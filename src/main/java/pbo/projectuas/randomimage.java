@@ -1,4 +1,7 @@
+package pbo.projectuas;
+
 import java.util.Random;
+
 public class randomimage {
     Random rand = new Random();
     private int x;

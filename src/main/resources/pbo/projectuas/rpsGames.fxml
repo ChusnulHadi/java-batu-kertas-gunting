@@ -12,6 +12,7 @@
       <ImageView fx:id="mainImage" fitHeight="150.0" fitWidth="150.0" layoutX="235.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="62.0">
          <image>
             <Image url="@../../paper.png" />
+            <!-- <Image url="@../../ /> -->
          </image>
       </ImageView>
       <Group layoutX="115.0" layoutY="293.0">

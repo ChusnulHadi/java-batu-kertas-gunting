@@ -1,6 +1,11 @@
-package pbo.projectuas;
-public static ShuffleImage {
-    public ShuffleImage() {
+// package pbo.projectuas;
+// public String static ShuffleImage {
+//     private String value;
+//     public ShuffleImage() {
 
-    }
-}
+//     }
+
+//     String Random() {
+
+//     }
+// }

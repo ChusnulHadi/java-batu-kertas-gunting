@@ -30,5 +30,3 @@ public class GamesController {
         // Image(getClass().getResourceAsStream("@../../" + choice + ".png")));
     }
 }
-
-GamesController GamesController = loader.

@@ -1,11 +1,8 @@
-// package pbo.projectuas;
-// public String static ShuffleImage {
-//     private String value;
-//     public ShuffleImage() {
+package pbo.package;
 
-//     }
+import javafx.scene.ImageView;
+import javafx.scene.Image;
 
-//     String Random() {
-
-//     }
-// }
+public class ShuffleImage {
+    ImageView mainImage = new ImageView();
+}

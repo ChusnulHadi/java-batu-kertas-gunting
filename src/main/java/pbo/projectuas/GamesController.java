@@ -19,3 +19,5 @@ public class GamesController {
         String choice = this.getRandomChoice(element);
     }
 }
+
+GamesController GamesController = loader.

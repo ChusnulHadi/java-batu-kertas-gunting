@@ -7,7 +7,7 @@ public class randomimage {
     private int x;
     private int randomnumber;
 
-    String randomimage(String result) {
+    String randomsString(String result) {
         Random rand = new Random();
         this.x = 3;
         this.randomnumber = rand.nextInt(x);

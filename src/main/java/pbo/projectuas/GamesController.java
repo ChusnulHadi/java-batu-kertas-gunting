@@ -12,7 +12,7 @@ import java.util.TimerTask;
 
 public class GamesController {
     private String[] element = { "paper", "rock", "scissors" };
-    // private Boolean isLoop = false;
+    private Boolean isLoop = false;
     // private int choice;
 
     @FXML
@@ -44,16 +44,19 @@ public class GamesController {
     @FXML
     void buttonHandler(ActionEvent event) {
         // isLoop = !isLoop;
-        new Timer().schedule(
-                new TimerTask() {
-                    @Override
-                    public void run() {
-                        String choice = getRandomChoice();
-                        System.out.println(choice);
-                        myImageView.setImage(new Image(choice + ".png"));
-                        System.out.println("ping");
-                    }
-                }, 0, 500);
+        if (isLoop) {
+
+            new Timer().schedule(
+                    new TimerTask() {
+                        @Override
+                        public void run() {
+                            String choice = getRandomChoice();
+                            System.out.println(choice);
+                            myImageView.setImage(new Image(choice + ".png"));
+                            System.out.println("ping");
+                        }
+                    }, 0, 500);
+        }
     }
 
 }

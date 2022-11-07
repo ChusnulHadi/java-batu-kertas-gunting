@@ -2,7 +2,7 @@ package pbo.projectuas;
 
 import java.util.Random;
 
-public class RandomImage {
+public class randomimage {
     Random rand = new Random();
     private int x;
     private int randomnumber;

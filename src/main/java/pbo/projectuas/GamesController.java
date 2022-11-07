@@ -31,7 +31,7 @@ public class GamesController {
     private Button scissorsButton;
 
     private String getRandomChoice() {
-        RandomImage getImage = new RandomImage();
+        randomimage getImage = new randomimage();
         return getImage.randomsString();
     }
 
@@ -52,20 +52,23 @@ public class GamesController {
 
     // mendapatkan nilai dari ketika user menekan tombol paper
     @FXML
-    void getPaperVal(ActionEvent event) {
-
+    void getPaperVal(ActionEvent event){
+        int paperInt = 1;
+        System.out.println(paperInt);
     }
-    // mendapatkan nilai dari ketika user menekan tombol rock
 
+    // mendapatkan nilai dari ketika user menekan tombol rock
     @FXML
     void getRockVal(ActionEvent event) {
-
+        int rockInt = 2;
+        System.out.println(rockInt);
     }
-    // mendapatkan nilai dari ketika user menekan tombol scissors
 
+    // mendapatkan nilai dari ketika user menekan tombol scissors
     @FXML
     void getScissorsVal(ActionEvent event) {
-
+        int scissorInt = 3;
+        System.out.println(scissorInt);
     }
 
 }

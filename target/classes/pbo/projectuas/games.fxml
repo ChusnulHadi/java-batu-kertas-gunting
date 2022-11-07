@@ -16,13 +16,13 @@
          </image></ImageView>
       <HBox layoutX="177.0" layoutY="296.0">
          <children>
-            <Button mnemonicParsing="false" text="Paper" />
-            <Button mnemonicParsing="false" text="Rock">
+            <Button fx:id="paperButton" mnemonicParsing="false" text="Paper" />
+            <Button fx:id="rockButton" mnemonicParsing="false" text="Rock">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Scissors" />
+            <Button fx:id="scissorsButton" mnemonicParsing="false" text="Scissors" />
          </children>
       </HBox>
    </children>

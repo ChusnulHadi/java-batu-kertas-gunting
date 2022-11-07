@@ -18,6 +18,7 @@ import pbo.projectuas.GamesController;
 public class App extends Application {
 
     private static Scene scene;
+    private myImage
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -31,7 +32,7 @@ public class App extends Application {
                     @Override
                     public void run() {
                         int rand = new Random().nextInt(3);
-                        GamesController(rand);
+                        MyIm
                     }
                 }, 0, 5000);
     }

@@ -12,41 +12,52 @@ import java.util.concurrent.TimeUnit;
 public class GamesController {
     private String[] element = { "paper", "rock", "scissors" };
     private Boolean isLoop = false;
+
     @FXML
     private AnchorPane mainStage;
 
     @FXML
     private ImageView myImageView;
 
-    @FXML 
+    @FXML
     private Button playButton;
 
-    private String getRandomChoice(String[] choices) {
-        Random rand = new Random();
-        int choice = rand.nextInt(choices.length);
-        return choices[choice];
+    @FXML
+    private Button paperButton;
+
+    @FXML
+    private Button rockButton;
+
+    @FXML
+    private Button scissorsButton;
+
+    private String getRandomChoice() {
+        // Random rand = new Random();
+        // int choice = rand.nextInt(choices.length);
+        // return choices[choice];
+        RandomImage getImage = new RandomImage();
+        return getImage.randomsString();
     }
 
     @FXML
     void buttonHandler(ActionEvent event) {
-        String choice = this.getRandomChoice(this.element);
         isLoop = !isLoop;
         try {
-            imageRender();
+            // imageRender();
+            // while (isLoop) {
+            String choice = this.getRandomChoice();
+            myImageView.setImage(new Image(choice + ".png"));
+            System.out.println(choice);
+            TimeUnit.MILLISECONDS.sleep(2000);
+
+            // }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    @FXML
-    void imageRender() throws InterruptedException {
-        while (isLoop) {
-            String imageUrl = getRandomChoice(element);
-            System.out.println("imageUrl");
-            myImageView.setImage(new Image(imageUrl + ".png"));
-            TimeUnit.MILLISECONDS.sleep(2000);
-        }
-    }
-
+    // void imageRender() throws InterruptedException {
+    // // int maximumTime = 5000;
+    // }
 
 }

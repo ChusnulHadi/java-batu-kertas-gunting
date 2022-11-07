@@ -44,16 +44,16 @@ public class GamesController {
     @FXML
     void buttonHandler(ActionEvent event) {
         // isLoop = !isLoop;
-        String choice = this.getRandomChoice();
-        System.out.println(choice);
         new Timer().schedule(
                 new TimerTask() {
                     @Override
                     public void run() {
+                        String choice = getRandomChoice();
+                        System.out.println(choice);
                         myImageView.setImage(new Image(choice + ".png"));
                         System.out.println("ping");
                     }
-                }, 0, 2000);
+                }, 0, 500);
     }
 
 }

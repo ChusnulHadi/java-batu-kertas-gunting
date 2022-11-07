@@ -7,8 +7,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+import pbo.projectuas.GamesController;
 
 /**
  * JavaFX App
@@ -23,6 +25,15 @@ public class App extends Application {
         stage.setTitle("Project UAS");
         stage.setScene(scene);
         stage.show();
+
+        new Timer().schedule(
+                new TimerTask() {
+                    @Override
+                    public void run() {
+                        int rand = new Random().nextInt(3);
+                        GamesController(rand);
+                    }
+                }, 0, 5000);
     }
 
     static void setRoot(String fxml) throws IOException {
@@ -36,13 +47,5 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
-
-        new Timer().schedule(
-            new TimerTask() {
-                @Override
-                public void run() {
-                    System.out.println("ping");
-                }
-            }, 0, 5000);
     }
 }

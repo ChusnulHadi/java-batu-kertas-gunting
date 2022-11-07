@@ -6,13 +6,14 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
+import java.util.Timer;
+import java.util.TimerTask;
+// import java.util.Random;
 
 public class GamesController {
     private String[] element = { "paper", "rock", "scissors" };
-    private Boolean isLoop = false;
-    private int choice;
+    // private Boolean isLoop = false;
+    // private int choice;
 
     @FXML
     private AnchorPane mainStage;
@@ -32,10 +33,6 @@ public class GamesController {
     @FXML
     private Button scissorsButton;
 
-    public GamesController(int choice) {
-        this.choice = choice;
-    }
-
     private String getRandomChoice() {
         // Random rand = new Random();
         // int choice = rand.nextInt(choices.length);
@@ -46,19 +43,17 @@ public class GamesController {
 
     @FXML
     void buttonHandler(ActionEvent event) {
-        isLoop = !isLoop;
-        try {
-            // imageRender();
-            // while (isLoop) {
-            String choice = this.getRandomChoice();
-            myImageView.setImage(new Image(choice + ".png"));
-            System.out.println(choice);
-            TimeUnit.MILLISECONDS.sleep(2000);
-
-            // }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        // isLoop = !isLoop;
+        // String choice = this.getRandomChoice();
+        // System.out.println(choice);
+        // myImageView.setImage(new Image(choice + ".png"));
+        new Timer().schedule(
+                new TimerTask() {
+                    @Override
+                    public void run() {
+                        System.out.println("ping");
+                    }
+                }, 0, 2000);
     }
 
 }

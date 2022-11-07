@@ -7,8 +7,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * JavaFX App
@@ -36,13 +34,5 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
-
-        new Timer().schedule(
-                new TimerTask() {
-                    @Override
-                    public void run() {
-                        System.out.println("ping");
-                    }
-                }, 0, 5000);
     }
 }

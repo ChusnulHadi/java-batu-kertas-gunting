@@ -12,6 +12,8 @@ import java.util.TimerTask;
 
 public class GamesController {
 
+    private Boolean isLoop = true;
+
     @FXML
     private AnchorPane mainStage;
 
@@ -38,16 +40,18 @@ public class GamesController {
     // Method menjalankan Play Button
     @FXML
     void buttonHandler(ActionEvent event) {
-        new Timer().schedule(
-                new TimerTask() {
-                    @Override
-                    public void run() {
-                        String choice = getRandomChoice();
-                        System.out.println(choice);
-                        myImageView.setImage(new Image(choice + ".png"));
-                        System.out.println("ping");
-                    }
-                }, 0, 100);
+            isLoop = true;
+            Timer t = new Timer();
+            t.schedule(
+                    new TimerTask() {
+                        @Override
+                        public void run() {
+                            String choice = getRandomChoice();
+                            System.out.println(choice);
+                            myImageView.setImage(new Image(choice + ".png"));
+                            if(!isLoop) t.cancel();
+                        }
+                    }, 0, 100);
     }
 
     // mendapatkan nilai dari ketika user menekan tombol paper

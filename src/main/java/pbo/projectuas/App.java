@@ -38,11 +38,11 @@ public class App extends Application {
         launch();
 
         new Timer().schedule(
-            new TimerTask() {
-                @Override
-                public void run() {
-                    System.out.println("ping");
-                }
-            }, 0, 5000);
+                new TimerTask() {
+                    @Override
+                    public void run() {
+                        System.out.println("ping");
+                    }
+                }, 0, 5000);
     }
 }

@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class GamesController {
     private String[] element = { "paper", "rock", "scissors" };
     private Boolean isLoop = false;
+    private int choice;
 
     @FXML
     private AnchorPane mainStage;
@@ -30,6 +31,10 @@ public class GamesController {
 
     @FXML
     private Button scissorsButton;
+
+    public GamesController(int choice) {
+        this.choice = choice;
+    }
 
     private String getRandomChoice() {
         // Random rand = new Random();
@@ -55,9 +60,5 @@ public class GamesController {
             e.printStackTrace();
         }
     }
-
-    // void imageRender() throws InterruptedException {
-    // // int maximumTime = 5000;
-    // }
 
 }

@@ -33,7 +33,7 @@ public class GamesController {
     private Button scissorsButton;
 
     private String getRandomChoice() {
-        randomimage getImage = new randomimage();
+        RandomImage getImage = new RandomImage();
         return getImage.randomsString();
     }
 

@@ -47,7 +47,6 @@ public class GamesController {
                     @Override
                     public void run() {
                         String choice = getRandomChoice();
-                        System.out.println(choice);
                         myImageView.setImage(new Image(choice + ".png"));
                         if (!isLoop)
                             t.cancel();

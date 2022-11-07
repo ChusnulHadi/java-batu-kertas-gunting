@@ -7,10 +7,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
-import pbo.projectuas.GamesController;
 
 /**
  * JavaFX App
@@ -18,7 +14,6 @@ import pbo.projectuas.GamesController;
 public class App extends Application {
 
     private static Scene scene;
-    private myImage
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -26,15 +21,6 @@ public class App extends Application {
         stage.setTitle("Project UAS");
         stage.setScene(scene);
         stage.show();
-
-        new Timer().schedule(
-                new TimerTask() {
-                    @Override
-                    public void run() {
-                        int rand = new Random().nextInt(3);
-                        MyIm
-                    }
-                }, 0, 5000);
     }
 
     static void setRoot(String fxml) throws IOException {

@@ -11,9 +11,6 @@ import java.util.TimerTask;
 // import java.util.Random;
 
 public class GamesController {
-    private String[] element = { "paper", "rock", "scissors" };
-    // private Boolean isLoop = false;
-    // private int choice;
 
     @FXML
     private AnchorPane mainStage;
@@ -34,16 +31,13 @@ public class GamesController {
     private Button scissorsButton;
 
     private String getRandomChoice() {
-        // Random rand = new Random();
-        // int choice = rand.nextInt(choices.length);
-        // return choices[choice];
         RandomImage getImage = new RandomImage();
         return getImage.randomsString();
     }
 
+    // Method menjalankan Play Button
     @FXML
     void buttonHandler(ActionEvent event) {
-        // isLoop = !isLoop;
         new Timer().schedule(
                 new TimerTask() {
                     @Override
@@ -53,7 +47,25 @@ public class GamesController {
                         myImageView.setImage(new Image(choice + ".png"));
                         System.out.println("ping");
                     }
-                }, 0, 500);
+                }, 0, 100);
+    }
+
+    // mendapatkan nilai dari ketika user menekan tombol paper
+    @FXML
+    void getPaperVal(ActionEvent event) {
+
+    }
+    // mendapatkan nilai dari ketika user menekan tombol rock
+
+    @FXML
+    void getRockVal(ActionEvent event) {
+
+    }
+    // mendapatkan nilai dari ketika user menekan tombol scissors
+
+    @FXML
+    void getScissorsVal(ActionEvent event) {
+
     }
 
 }

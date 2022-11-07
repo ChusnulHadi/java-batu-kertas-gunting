@@ -16,7 +16,7 @@ public class GamesController {
     @FXML
     private ImageView myImageView;
 
-    @FXML
+    @FXML 
     private Button playButton;
 
     private String getRandomChoice(String[] choices) {

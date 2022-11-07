@@ -40,23 +40,25 @@ public class GamesController {
     // Method menjalankan Play Button
     @FXML
     void buttonHandler(ActionEvent event) {
-            isLoop = true;
-            Timer t = new Timer();
-            t.schedule(
-                    new TimerTask() {
-                        @Override
-                        public void run() {
-                            String choice = getRandomChoice();
-                            System.out.println(choice);
-                            myImageView.setImage(new Image(choice + ".png"));
-                            if(!isLoop) t.cancel();
-                        }
-                    }, 0, 100);
+        isLoop = true;
+        Timer t = new Timer();
+        t.schedule(
+                new TimerTask() {
+                    @Override
+                    public void run() {
+                        String choice = getRandomChoice();
+                        System.out.println(choice);
+                        myImageView.setImage(new Image(choice + ".png"));
+                        if (!isLoop)
+                            t.cancel();
+                    }
+                }, 0, 100);
     }
 
     // mendapatkan nilai dari ketika user menekan tombol paper
     @FXML
-    void getPaperVal(ActionEvent event){
+    void getPaperVal(ActionEvent event) {
+        isLoop = false;
         int paperInt = 1;
         System.out.println(paperInt);
     }
@@ -64,6 +66,7 @@ public class GamesController {
     // mendapatkan nilai dari ketika user menekan tombol rock
     @FXML
     void getRockVal(ActionEvent event) {
+        isLoop = false;
         int rockInt = 2;
         System.out.println(rockInt);
     }
@@ -71,6 +74,7 @@ public class GamesController {
     // mendapatkan nilai dari ketika user menekan tombol scissors
     @FXML
     void getScissorsVal(ActionEvent event) {
+        isLoop = false;
         int scissorInt = 3;
         System.out.println(scissorInt);
     }

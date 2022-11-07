@@ -14,6 +14,7 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private myImage
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -21,6 +22,15 @@ public class App extends Application {
         stage.setTitle("Project UAS");
         stage.setScene(scene);
         stage.show();
+
+        new Timer().schedule(
+                new TimerTask() {
+                    @Override
+                    public void run() {
+                        int rand = new Random().nextInt(3);
+                        MyIm
+                    }
+                }, 0, 5000);
     }
 
     static void setRoot(String fxml) throws IOException {

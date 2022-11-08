@@ -53,21 +53,23 @@ public class GamesController {
                 new TimerTask() {
                     @Override
                     public void run() {
-                        String choice = getRandomChoice();
-                        if (choice == "paper") {
-                            comp = 1;
-                            // System.out.println(comp);
-                        } else if (choice == "rock") {
-                            comp = 2;
-                            // System.out.println(comp);
-                        } else {
-                            comp = 3;
-                            // System.out.println(comp);
-                        }
-                        System.out.println(choice);
-                        myImageView.setImage(new Image(choice + ".png"));
-                        if (!isLoop)
+                        if (!isLoop) {
                             t.cancel();
+                        } else {
+                            String choice = getRandomChoice();
+                            if (choice == "paper") {
+                                comp = 1;
+                                // System.out.println(comp);
+                            } else if (choice == "rock") {
+                                comp = 2;
+                                // System.out.println(comp);
+                            } else {
+                                comp = 3;
+                                // System.out.println(comp);
+                            }
+                            System.out.println(choice);
+                            myImageView.setImage(new Image(choice + ".png"));
+                        }
                     }
                 }, 0, 100);
     }
